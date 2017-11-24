@@ -1,8 +1,9 @@
-43a44,50
+43a44,51
 > 
 >     location /kingdom {
 >         proxy_buffering off;
 >         proxy_set_header Host $host;
 >         proxy_set_header X-Real-IP $remote_addr;
+>         proxy_pass http://localhost:8080/kingdom;
 >     }
 > 
