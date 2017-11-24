@@ -1,0 +1,14 @@
+version: '3'
+services:
+  crm-proxy:
+    image: crm-proxy
+    depends_on:
+      - crm
+    ports:
+      - 80:80
+    links:
+      - crm:kingdomserver
+  crm:
+    image: crm
+    ports:
+      - 8080:8080
